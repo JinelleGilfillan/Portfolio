@@ -16,4 +16,5 @@ Various programs completed during courses at Georgia Tech.
  - Querying using DAX query
  - Power Query in Excel
  - Formulas in Excel
+ - VBA in excel to create macros
  - Measures and calculated columns in Power BI
