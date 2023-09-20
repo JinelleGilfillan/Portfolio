@@ -6,4 +6,9 @@ decisions in the projects she worked on.
 
 #### Software Engineer at HubSpot
 
-At HubSpot, Jinelle worked as a backend Software Engineer. 
+At HubSpot, Jinelle worked as a backend Software Engineer. Some of the skills she used during her time at HubSpot include Java, SQL, RESTful API, Kafka, and Database design.
+
+##### Project List
+- Generation of task to reach out to new leads in CRM
+- Ability to create all day tasks instead of specifying a time
+- Storage options and APIs to save user preferences on prospecting workspace landing page
