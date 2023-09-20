@@ -5,9 +5,9 @@ Welcome to Jinelle Gilfillan's portfolio of coding programs! There are examples 
 Various programs completed during courses at Georgia Tech.
 ### List of Courses:
  - Artificial Intelligence
- - Knowledge Based Artificial Intelligence
+ - [Knowledge Based Artificial Intelligence](https://github.com/JinelleGilfillan/Portfolio/tree/master/Examples%20from%20Class/Knowledge%20Based%20AI)
  - Human Computer Interaction
- - Machine Learning for Trading
+ - [Machine Learning for Trading](https://github.com/JinelleGilfillan/Portfolio/tree/master/Examples%20from%20Class/Machine%20Learning%20for%20Trading)
  - AI Ethics and Society
  - Deep Learning
  - Game AI
