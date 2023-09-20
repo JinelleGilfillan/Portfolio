@@ -1,5 +1,7 @@
 ## Project Highlights from HubSpot
 
+While the code Jinelle worked on during her role at HubSpot is private and protected property, she can share project descriptions, overviews, and reasonings as to why she made certain decisions in the projects she worked on.
+
 At HubSpot, Jinelle worked as a backend Software Engineer on a team that's goal was to increase the productivity of our sales rep customers. Some of the skills she used during her time at HubSpot include Java, SQL, RESTful API, Kafka, and Database design.
 
 ### Project List
