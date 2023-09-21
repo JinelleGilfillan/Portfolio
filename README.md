@@ -13,7 +13,7 @@ Various programs completed during courses at Georgia Tech.
  - Game AI
  - Graduate Intro to OS
  - Machine Learning
- - Software Development Process
+ - [Software Development Process](https://github.com/JinelleGilfillan/Portfolio/tree/master/Examples%20from%20Class/Software%20Development%20Process)
  
  ## Examples from Software Engineer role at Hubspot
  These are various high level examples of projects that Jinelle has completed through her experience in her current role as a backend software engineer at Hubspot. 
