@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.2.2">
+
+    <issue
+        id="TextViewEdits"
+        severity="Warning"
+        message="Attribute `android:inputType` should not be used with `&lt;TextView>`: Change element type to `&lt;EditText>` ?"
+        category="Correctness"
+        priority="7"
+        summary="TextView should probably be an EditText instead"
+        explanation="Using a `&lt;TextView>` to input text is generally an error, you should be using `&lt;EditText>` instead.  `EditText` is a subclass of `TextView`, and some of the editing support is provided by `TextView`, so it&apos;s possible to set some input-related properties on a `TextView`. However, using a `TextView` along with input attributes is usually a cut &amp; paste error. To input text you should be using `&lt;EditText>`.&#xA;&#xA;This check also checks subclasses of `TextView`, such as `Button` and `CheckBox`, since these have the same issue: they should not be used with editable attributes."
+        errorLine1="                android:inputType=&quot;textMultiLine&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="149"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    finalResult.append(character.toUpperCase());"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/java/edu/gatech/seclass/sdpencryptor/MainActivity.java"
+            line="252"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    finalResult.append(character.toLowerCase());"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/java/edu/gatech/seclass/sdpencryptor/MainActivity.java"
+            line="254"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v24`) is unnecessary; `minSdkVersion` is 30. Merge all the resources in this folder into `drawable`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/drawable-v24"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 30. Merge all the resources in this folder into `mipmap-anydpi`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 21"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;l&quot;>?attr/colorPrimaryVariant&lt;/item>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/values-night/themes.xml"
+            line="13"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 21"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targetApi=&quot;l&quot;>?attr/colorPrimaryVariant&lt;/item>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/values/themes.xml"
+            line="13"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        severity="Warning"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
+        category="Performance"
+        priority="3"
+        summary="Inefficient layout weight"
+        explanation="When only a single widget in a `LinearLayout` defines a weight, it is more efficient to assign a width/height of `0dp` to it since it will absorb all the remaining space anyway. With a declared width/height of `0dp` it does not have to measure its own size first."
+        errorLine1="                android:layout_width=&quot;wrap_content&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="123"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="37"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="63"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="77"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="92"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="106"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="135"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="37"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="63"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="77"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="92"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="106"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        severity="Warning"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        category="Accessibility"
+        priority="2"
+        summary="Missing accessibility label"
+        explanation="Editable text fields should provide an `android:hint` or, provided your `minSdkVersion` is at least 17, they may be referenced by a view with a `android:labelFor` attribute.&#xA;&#xA;When using `android:labelFor`, be sure to provide an `android:text` or an `android:contentDescription`.&#xA;&#xA;If your view is labeled but by a label in a different layout which includes this one, just suppress this warning from lint."
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="135"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;SDP Encryptor Fall 2022&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;SDP Encryptor Fall 2022&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Entry Text&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Entry Text&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="44"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Arg Input 1&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Arg Input 1&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="70"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Arg Input 2&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Arg Input 2&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="99"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Encrypt Entry Text&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Encrypt Entry Text&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="127"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Entry Text Encrypted&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Entry Text Encrypted&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/jgilfillan/User1/6300Fall22jgilfillan6/Assignment4/SDPEncryptor/app/src/main/res/layout/activity_main.xml"
+            line="141"
+            column="17"/>
+    </issue>
+
+</issues>
