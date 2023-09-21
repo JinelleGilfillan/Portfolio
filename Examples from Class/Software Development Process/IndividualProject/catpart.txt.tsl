@@ -1,0 +1,730 @@
+
+Test Case 1  		<single>
+   file size :  empty
+
+
+Test Case 2  		<error>  (follows [if])
+   file ends in new line :  no
+
+
+Test Case 3  		<error>
+   parameters :  file missing
+
+
+Test Case 4  		<single>
+   option options :  sorted out of order
+
+
+Test Case 5  		<single>
+   option options :  repeated options
+
+
+Test Case 6  		<single>
+   -o :  present
+
+
+Test Case 7  		<error>  (follows [else])
+   -r :  present
+
+
+Test Case 8  		<error>  (follows [else])
+   -i :  present
+
+
+Test Case 9  		<error>  (follows [else])
+   -w :  present
+
+
+Test Case 10 		<error>  (follows [if])
+   output file name :  blank file name
+
+
+Test Case 11 		<error>  (follows [if])
+   output file name :  duplicate file name
+
+
+Test Case 12 		<error>
+   output file name :  invalid
+
+
+Test Case 13 		<single>  (follows [if])
+   k substring :  empty string
+
+
+Test Case 14 		<error>  (follows [if])
+   k substring :  missing
+
+
+Test Case 15 		<error>  (follows [if])
+   r old :  empty string
+
+
+Test Case 16 		<error>  (follows [if])
+   r old :  missing
+
+
+Test Case 17 		<single>  (follows [if])
+   r new :  empty string
+
+
+Test Case 18 		<single>  (follows [if])
+   r new :  multiple occurrences
+
+
+Test Case 19 		<error>  (follows [if])
+   r new :  missing
+
+
+Test Case 20 		<error>  (follows [if])
+   s suffix :  empty string
+
+
+Test Case 21 		<error>  (follows [if])
+   s suffix :  missing
+
+
+Test Case 22 		<single>  (follows [if])
+   n padding :  more than line digit
+
+
+Test Case 23 		<error>
+   n padding :  invalid
+
+
+Test Case 24 		<error>  (follows [if])
+   n padding :  missing
+
+
+Test Case 25 		<single>  (follows [if])
+   w string type :  has tabs
+
+
+Test Case 26 		(Key = 2.1.2.1.1.1.1.1.1.1.1.0.0.0.0.0.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 27 		(Key = 2.1.2.1.1.1.1.1.1.1.2.0.0.0.0.0.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 28 		(Key = 2.1.2.1.1.1.1.1.1.2.1.0.0.0.0.0.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 29 		(Key = 2.1.2.1.1.1.1.1.2.1.1.0.0.0.0.2.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 30 		(Key = 2.1.2.1.1.1.1.1.2.1.2.0.0.0.0.2.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 31 		(Key = 2.1.2.1.1.1.1.1.2.2.1.0.0.0.0.2.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 32 		(Key = 2.1.2.1.1.1.2.1.1.1.1.0.0.2.2.0.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 33 		(Key = 2.1.2.1.1.1.2.1.1.1.2.0.0.2.2.0.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 34 		(Key = 2.1.2.1.1.1.2.1.1.2.1.0.0.2.2.0.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  <n/a>
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 35 		(Key = 2.1.2.1.1.1.2.1.2.1.1.0.0.2.2.2.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 36 		(Key = 2.1.2.1.1.1.2.1.2.1.2.0.0.2.2.2.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 37 		(Key = 2.1.2.1.1.1.2.1.2.2.1.0.0.2.2.2.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  string
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 38 		(Key = 2.1.2.1.1.1.2.2.1.1.1.0.0.2.2.0.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 39 		(Key = 2.1.2.1.1.1.2.2.1.1.2.0.0.2.2.0.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 40 		(Key = 2.1.2.1.1.1.2.2.1.2.1.0.0.2.2.0.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  present
+   -s                    :  not present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  <n/a>
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 41 		(Key = 2.1.2.1.1.1.2.2.2.1.1.0.0.2.2.2.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 42 		(Key = 2.1.2.1.1.1.2.2.2.1.2.0.0.2.2.2.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 43 		(Key = 2.1.2.1.1.1.2.2.2.2.1.0.0.2.2.2.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  not present
+   -r                    :  present
+   -i                    :  present
+   -s                    :  present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  <n/a>
+   r old                 :  string
+   r new                 :  string
+   s suffix              :  string
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 44 		(Key = 2.1.2.1.1.2.1.1.1.1.1.0.2.0.0.0.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 45 		(Key = 2.1.2.1.1.2.1.1.1.1.2.0.2.0.0.0.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 46 		(Key = 2.1.2.1.1.2.1.1.1.2.1.0.2.0.0.0.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  not present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 47 		(Key = 2.1.2.1.1.2.1.1.2.1.1.0.2.0.0.2.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 48 		(Key = 2.1.2.1.1.2.1.1.2.1.2.0.2.0.0.2.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 49 		(Key = 2.1.2.1.1.2.1.1.2.2.1.0.2.0.0.2.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  not present
+   -s                    :  present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 50 		(Key = 2.1.2.1.1.2.1.2.1.1.1.0.2.0.0.0.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 51 		(Key = 2.1.2.1.1.2.1.2.1.1.2.0.2.0.0.0.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  present
+   -s                    :  not present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 52 		(Key = 2.1.2.1.1.2.1.2.1.2.1.0.2.0.0.0.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  present
+   -s                    :  not present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  <n/a>
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
+
+Test Case 53 		(Key = 2.1.2.1.1.2.1.2.2.1.1.0.2.0.0.2.0.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  <n/a>
+
+
+Test Case 54 		(Key = 2.1.2.1.1.2.1.2.2.1.2.0.2.0.0.2.0.2.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  present
+   -s                    :  present
+   -n                    :  not present
+   -w                    :  present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  <n/a>
+   w string type         :  has spaces
+
+
+Test Case 55 		(Key = 2.1.2.1.1.2.1.2.2.2.1.0.2.0.0.2.1.0.)
+   file size             :  not empty
+   file ends in new line :  yes
+   parameters            :  correct syntax
+   option options        :  sorted in order
+   -o                    :  not present
+   -k                    :  present
+   -r                    :  not present
+   -i                    :  present
+   -s                    :  present
+   -n                    :  present
+   -w                    :  not present
+   output file name      :  <n/a>
+   k substring           :  string
+   r old                 :  <n/a>
+   r new                 :  <n/a>
+   s suffix              :  string
+   n padding             :  less than line digit
+   w string type         :  <n/a>
+
