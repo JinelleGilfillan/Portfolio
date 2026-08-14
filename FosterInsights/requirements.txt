@@ -1,0 +1,16 @@
+asgiref==3.12.1
+click==8.4.2
+colorama==0.4.6
+dj-database-url==3.1.2
+Django==6.0.7
+django-cors-headers==4.9.0
+djangorestframework==3.17.1
+gunicorn==26.0.0
+h11==0.16.0
+packaging==26.2
+psycopg2-binary==2.9.12
+python-dotenv==1.2.2
+sqlparse==0.5.5
+tzdata==2026.3
+uvicorn==0.51.0
+whitenoise==6.12.0

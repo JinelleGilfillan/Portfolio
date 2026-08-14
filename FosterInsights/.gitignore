@@ -1,0 +1,8 @@
+.env
+db.sqlite3
+*.sqlite3
+*.sqlite3-journal
+*.db
+core_security.py
+__pycache__
+main/__pycache__/core_security.cpython-314.pyc
