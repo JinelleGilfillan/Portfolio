@@ -1,5 +1,6 @@
 # Portfolio Project Index
 
+- [FosterInsights Project](https://github.com/JinelleGilfillan/Portfolio/tree/master/FosterInsights) - Full stack web app project using Django and React that analyzes example foster care data capacity and shows recommended areas of improvement for capacity.
 - [Assess Learners Project](https://github.com/JinelleGilfillan/Portfolio/tree/6b629201db6e50fa63d2dffe2b836dae58216540/Assess%20Learners) - Program to create decision tree, random tree, linear regression, and bagging algorithms in order to apply to stock data.
 - [Bayes Nets](https://github.com/JinelleGilfillan/Portfolio/tree/master/Bayes%20Nets) - Used Bayes Nets technique to solve various problems.
 - [Optimize Something](https://github.com/JinelleGilfillan/Portfolio/tree/b1cd11b24b7b5613d0d4b8215bf64f5adfac8f98/Optimize%20Something) - Program to determine and display a portfolio of stocks' performance compared to SPY500 by normalizing the data.
